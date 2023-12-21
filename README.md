@@ -1,16 +1,65 @@
-# cloudflare_zt_client
+# Flutter Application - [Demo] (https://youtu.be/MthisxvBx5g)
 
-A new Flutter project.
+## Installation
 
-## Getting Started
+Make sure you have Flutter version 3.16.x installed. If not, you can install it by following the Flutter installation instructions at [Flutter Documentation](https://flutter.dev/docs/get-started/install).
 
-This project is a starting point for a Flutter application.
+After installing Flutter, run the following commands in your terminal:
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+flutter pub get
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This will download the necessary libraries for the application.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Running the Application
+
+To start the application, use the following command:
+
+```bash
+flutter devices
+flutter run -d macos # or other available devices such as windows and linux
+```
+
+This command will launch the application on macOS.
+
+## Running Tests with Code Coverage
+
+To run tests and generate code coverage, use the following command:
+
+```bash
+flutter test --coverage test
+```
+
+This will execute tests and generate coverage reports. You can view the coverage report by opening the generated `lcov` file.
+
+## Third-Party Libraries
+
+This application utilizes the following third-party libraries:
+
+- [Riverpod](https://pub.dev/packages/riverpod) for state management and dependency injection
+- [Dio](https://pub.dev/packages/dio) for HTTP client
+- [Mocktail](https://pub.dev/packages/mocktail) for mock testing
+
+## Architecture
+
+The application follows the clean architecture with the following components:
+
+### Client
+
+- **Authentication Client:** Responsible for making HTTP calls to retrieve http response.
+- **Daemon Client:** Interacts with the daemon process using sockets.
+
+### Repository
+
+- **Authentication Repository:** Retrieves authentication data for the application using the authentication client.
+- **Daemon Repository:** Communicates with the daemon via the daemon client and returns the connection status of the daemon.
+
+### Service
+
+- **Connection Service:** Controls the lifecycle of the connection for authentication and daemon processes.
+
+### Presenter
+
+- **Connection Page:** Binds the connection status provided by the connection service with the UI Widget
+
