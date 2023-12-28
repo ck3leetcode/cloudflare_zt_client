@@ -7,8 +7,6 @@ import 'dart:convert';
 DaemonResponse daemonResponseFromJson(String str) =>
     DaemonResponse.fromJson(json.decode(str));
 
-String daemonResponseToJson(DaemonResponse data) => json.encode(data.toJson());
-
 class DaemonResponse {
   String? status;
   String? message;
@@ -25,12 +23,6 @@ class DaemonResponse {
         message: json["message"],
         data: json["data"] == null ? null : Data.fromJson(json["data"]),
       );
-
-  Map<String, dynamic> toJson() => {
-        "status": status,
-        "message": message,
-        "data": data?.toJson(),
-      };
 }
 
 class Data {
@@ -46,9 +38,4 @@ class Data {
         daemonStatus: json["daemon_status"],
         message: json["message"],
       );
-
-  Map<String, dynamic> toJson() => {
-        "daemon_status": daemonStatus,
-        "message": message,
-      };
 }

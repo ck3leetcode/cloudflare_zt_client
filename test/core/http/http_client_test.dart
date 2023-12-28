@@ -57,6 +57,12 @@ void main() {
       // Assert
       expect(result, isA<Failure>());
     });
+
+    test('Unimplemented Methods', () async {
+      expect(() async => await httpClient.doPost("", {'key': 'value'}), throwsA(isA<UnimplementedError>()));
+      expect(() async => await httpClient.doPut("", {'key': 'value'}), throwsA(isA<UnimplementedError>()));
+      expect(() async => await httpClient.doDelete(""), throwsA(isA<UnimplementedError>()));
+    });
   });
 }
 
