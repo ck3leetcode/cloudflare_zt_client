@@ -1,4 +1,4 @@
-# Flutter Application - [Demo] (https://youtu.be/MthisxvBx5g)
+# Flutter Application
 
 ## Installation
 
@@ -23,6 +23,8 @@ flutter run -d macos # or other available devices such as windows and linux
 
 This command will launch the application on macOS.
 
+watch [Demo](https://youtu.be/MthisxvBx5g)
+
 ## Running Tests with Code Coverage
 
 To run tests and generate code coverage, use the following command:
@@ -31,7 +33,10 @@ To run tests and generate code coverage, use the following command:
 flutter test --coverage test
 ```
 
-This will execute tests and generate coverage reports. You can view the coverage report by opening the generated `lcov` file.
+This will execute tests and generate coverage reports. You can view the coverage report by opening the generated `lcov` file or use third party [website](https://lcov-viewer.netlify.app) to view the report.
+
+<img width="1300" alt="Screenshot 2023-12-28 at 11 47 35 AM" src="https://github.com/ck3leetcode/cloudflare_zt_client/assets/55478572/71f02fb7-f4de-4381-9873-1601d8688ca2">
+
 
 ## Third-Party Libraries
 
