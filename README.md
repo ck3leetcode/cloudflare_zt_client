@@ -66,5 +66,9 @@ The application follows the clean architecture with the following components:
 
 ### Presenter
 
-- **Connection Page:** Binds the connection status provided by the connection service with the UI Widget
+- **Connection Controller:** Binds the connection status provided by the connection service with the UI Widget
+
+### View
+
+- **Connection Page:** A UI Widget that is binded to the connection status provided by the connection service
 
